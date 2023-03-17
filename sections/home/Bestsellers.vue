@@ -12,7 +12,7 @@
                     <div class="item w-100% cursor-pointer">
                         <div class="item-header">
                             <h3 class="text-16px font-550">NOAH X JESUS PIECE RUGBY</h3>
-                            <P class="text-16px opacity-90  font-courier">$188</P>
+                            <p class="text-16px opacity-90  font-courier">$188</p>
                         </div>
                         <div class="item-img w-100% h-100% mt-15px">
                             <img src="https://cdn.shopify.com/s/files/1/1007/8070/products/S068SS23_SHORT_SLEEVE_FLANNEL_0450_1000x.jpg?v=1677886843" class="w-100% h-100% object-cover"/>
@@ -23,7 +23,7 @@
                     <div class="item w-100% cursor-pointer">
                         <div class="item-header">
                             <h3 class="text-16px font-550">COUNTRY JACKET</h3>
-                            <P class="text-16px opacity-90  font-courier">$798</P>
+                            <p class="text-16px opacity-90  font-courier">$798</p>
                         </div>
                         <div class="item-img w-100% h-100% mt-15px">
                             <img src="https://cdn.shopify.com/s/files/1/1007/8070/products/KN110SS23_RUGBY_POCKET_CARDIGAN_0636_1000x.jpg?v=1678308267" class="w-100% h-100% object-cover"/>
