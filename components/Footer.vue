@@ -71,7 +71,7 @@ export default {
 }
 
 .newsletter-input {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5)
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
 }
 
 input:focus {

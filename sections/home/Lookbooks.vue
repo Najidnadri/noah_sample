@@ -6,7 +6,7 @@
         <nuxt-link :to="''" class="text-16px decoration-underline">See more +</nuxt-link>
     </div>
 
-    <div class="lookbooks-content px-20px relative overflow-visible" :style="{cursor: cursor.visible === 1 ? 'none' : 'default'}">
+    <div class="lookbooks-content px-20px relative overflow-visible" :style="{cursor: cursor.visible === 1 ? 'none' : 'default'}" id="lookbooks-pin">
         <div class="custom-cursor h-300px w-250px absolute secondary-bg z-90" :style="{opacity: cursor.visible, top: cursor.y + 'px', left: cursor.x + 'px'}">
             <img v-show="cursor.hoverIndex === 0" class="absolute h-100% w-100% object-cover" src="https://cdn.shopify.com/s/files/1/1007/8070/products/SS112SS23_NOAH_LAVENHAM_QUILTED_CREWNECK_0089_1000x.jpg?v=1678157850" />
             <img v-show="cursor.hoverIndex === 1" class="absolute h-100% w-100% object-cover" src="https://cdn.shopify.com/s/files/1/1007/8070/products/230113_SHOT_16_025_1000x.jpg?v=1678308554"/>
@@ -14,7 +14,7 @@
             <img v-show="cursor.hoverIndex === 3" class="absolute h-100% w-100% object-cover" src="https://cdn.shopify.com/s/files/1/1007/8070/products/230113_SHOT_29_051_8844bef4-e9eb-4b6f-9042-e44e03a1dc79_1000x.jpg?v=1677715058"/>
         </div>
 
-        <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[3].hover ? 1 : 0.7}">
+        <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[3].hover ? 1 : 0.7}" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-2" data-scroll-target="#lookbooks-pin">
             <div class="lookbook-title text-24px font-600">
                 <h3>FALL / WINTER `22</h3>
             </div>
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[2].hover ? 1 : 0.7}">
+        <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[2].hover ? 1 : 0.7}" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-2.5" data-scroll-target="#lookbooks-pin">
             <div class="lookbook-title text-24px font-600">
                 <h3>SPRING / SUMMER 2022 LOOKS</h3>
             </div>
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[1].hover ? 1 : 0.7}" >
+        <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[1].hover ? 1 : 0.7}" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3" data-scroll-target="#lookbooks-pin">
             <div class="lookbook-title text-24px font-600">
                 <h3>FALL / WINTER 2021 LOOKBOOK</h3>
             </div>
@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[0].hover ? 1 : 0.7}" >
+        <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[0].hover ? 1 : 0.7}" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3.5" data-scroll-target="#lookbooks-pin">
             <div class="lookbook-title text-24px font-600">
                 <h3>SPRING / SUMMER 2021</h3>
             </div>
