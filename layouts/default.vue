@@ -1,5 +1,5 @@
 <template>
-  <div class="default-layout relative" data-scroll-container>
+  <div class="default-layout relative primary-bg" data-scroll-container>
     <Nav1Vue />
     <slot />
     <FooterVue data-scroll-section />
