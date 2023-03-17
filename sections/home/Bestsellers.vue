@@ -1,5 +1,5 @@
 <template>
-    <div class="bestsellers-section my-90px w-100% mx-auto min-h-400px">
+    <div class="bestsellers-section my-90px w-100% mx-auto min-h-400px relative z-10 ">
 
         <div class="sub-header flex flex-row justify-between items-end px-20px pb-10px">
             <h2 class="text-25px font-600 font-oswald tracking-2px">BESTSELLERS</h2>

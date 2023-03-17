@@ -6,15 +6,15 @@
         <nuxt-link :to="''" class="text-16px decoration-underline">See more +</nuxt-link>
     </div>
 
-    <div class="lookbooks-content px-20px relative overflow-visible" @mouseenter="contentBoxMouseEnter" @mouseleave="contentBoxMouseLeave" @mousemove="contentBoxMouseMove" :style="{cursor: cursor.visible === 1 ? 'none' : 'default'}">
-        <div class="custom-cursor h-300px w-250px absolute secondary-bg z-60" :style="{opacity: cursor.visible, top: cursor.y + 'px', left: cursor.x + 'px'}">
+    <div class="lookbooks-content px-20px relative overflow-visible" :style="{cursor: cursor.visible === 1 ? 'none' : 'default'}">
+        <div class="custom-cursor h-300px w-250px absolute secondary-bg z-90" :style="{opacity: cursor.visible, top: cursor.y + 'px', left: cursor.x + 'px'}">
             <img v-show="cursor.hoverIndex === 0" class="absolute h-100% w-100% object-cover" src="https://cdn.shopify.com/s/files/1/1007/8070/products/SS112SS23_NOAH_LAVENHAM_QUILTED_CREWNECK_0089_1000x.jpg?v=1678157850" />
             <img v-show="cursor.hoverIndex === 1" class="absolute h-100% w-100% object-cover" src="https://cdn.shopify.com/s/files/1/1007/8070/products/230113_SHOT_16_025_1000x.jpg?v=1678308554"/>
             <img v-show="cursor.hoverIndex === 2" class="absolute h-100% w-100% object-cover" src="https://cdn.shopify.com/s/files/1/1007/8070/products/B052SS23_SUEDE_SHOULDER_BAG_0498_1000x.jpg?v=1678206764"/>
             <img v-show="cursor.hoverIndex === 3" class="absolute h-100% w-100% object-cover" src="https://cdn.shopify.com/s/files/1/1007/8070/products/230113_SHOT_29_051_8844bef4-e9eb-4b6f-9042-e44e03a1dc79_1000x.jpg?v=1677715058"/>
         </div>
 
-        <div class="lookbook relative min-h-80px py-20px" @mouseenter="lookbookMouseEnter(0)">
+        <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[3].hover ? 1 : 0.7}">
             <div class="lookbook-title text-24px font-600">
                 <h3>FALL / WINTER `22</h3>
             </div>
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class="lookbook relative min-h-80px py-20px" @mouseenter="lookbookMouseEnter(1)">
+        <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[2].hover ? 1 : 0.7}">
             <div class="lookbook-title text-24px font-600">
                 <h3>SPRING / SUMMER 2022 LOOKS</h3>
             </div>
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div class="lookbook relative min-h-80px py-20px" @mouseenter="lookbookMouseEnter(2)">
+        <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[1].hover ? 1 : 0.7}" >
             <div class="lookbook-title text-24px font-600">
                 <h3>FALL / WINTER 2021 LOOKBOOK</h3>
             </div>
@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="lookbook relative min-h-80px py-20px" @mouseenter="lookbookMouseEnter(3)">
+        <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[0].hover ? 1 : 0.7}" >
             <div class="lookbook-title text-24px font-600">
                 <h3>SPRING / SUMMER 2021</h3>
             </div>
@@ -73,40 +73,85 @@ class Cursor {
     }
 }
 
+class Lookbook {
+    constructor(top) {
+        this.top = top;
+        this.hover = false;
+    }
+}
+
 export default {
     setup() {
         let cursor = ref(new Cursor());
         let contentBox = null;
+        let lookbooks = ref([new Lookbook(), new Lookbook(), new Lookbook(), new Lookbook()]);
 
         onMounted(() => {
             let cursor = document.getElementsByClassName('custom-cursor')[0];
             contentBox = document.getElementsByClassName('lookbooks-content')[0];
-            let lookbooks = Array.from(document.getElementsByClassName('lookbook'));
-            
+            let lookbooksEl = Array.from(document.getElementsByClassName('lookbook'));
+
+            let temp = []
+            lookbooksEl.forEach((el) => {
+                let top = el.getBoundingClientRect().top;
+                temp.unshift(new Lookbook(top - contentBox.getBoundingClientRect().top))
+            })
+            lookbooks.value = temp;
+
+            contentBox.addEventListener('mouseenter', contentBoxMouseEnter);
+            contentBox.addEventListener('mouseleave', contentBoxMouseLeave);
+            contentBox.addEventListener('mousemove', contentBoxMouseMove);
+
+            // lookbooks.forEach((el, index) => {
+            //     el.addEventListener('mouseover', () => {
+            //         console.log(index + 1);
+            //         lookbookMouseEnter(index + 1);
+            //     })
+            // })
         })
 
         let contentBoxMouseEnter = () => {
-            cursor.value.setVisible(1);
+            window.requestAnimationFrame(() => {
+                cursor.value.setVisible(1);
+            })
         }
 
         let contentBoxMouseLeave = () => {
-            cursor.value.setVisible(0);
+            window.requestAnimationFrame(() => {
+                cursor.value.setVisible(0);
+            })
+            
         }
 
         let contentBoxMouseMove = (event) => {
             // cursor.value.x = event.offsetX;
             // cursor.value.y = event.offsetY;
-            let offsetY = event.clientY - contentBox.getBoundingClientRect().top;
-            cursor.value.x = event.clientX;
-            cursor.value.y = offsetY;
+            window.requestAnimationFrame(() => {
+                let offsetY = event.clientY - contentBox.getBoundingClientRect().top;
+                let done = false;
+                lookbooks.value.forEach((lookbook, index) => {
+                    if (offsetY > lookbook.top && done === false) {
+                        done = true
+                        lookbook.hover = true;
+                        cursor.value.hoverIndex = 3 - index;
+                    } else {
+                        lookbook.hover = false;
+                    }
+                })
+                cursor.value.x = event.clientX;
+                cursor.value.y = offsetY;
+            })
+
         }
 
         let lookbookMouseEnter = (index) => {
-
-            cursor.value.hoverIndex = index;
+            window.requestAnimationFrame(() => {
+                cursor.value.hoverIndex = index;
+            })  
+           
         }
 
-        return { contentBoxMouseEnter, contentBoxMouseLeave, cursor, contentBoxMouseMove, lookbookMouseEnter }
+        return { contentBoxMouseEnter, contentBoxMouseLeave, cursor, contentBoxMouseMove, lookbookMouseEnter, lookbooks }
     }
 }
 </script>
@@ -122,10 +167,6 @@ export default {
     
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.lookbook:hover {
-    opacity: 1;
 }
 
 .lookbook-description {

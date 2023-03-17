@@ -2,8 +2,11 @@
     <div>
         <heroVue data-scroll-section />
         <NewArrivalsVue data-scroll-section />
-        <LookbooksVue  data-scroll-section />
-        <BestsellersVue data-scroll-section />
+        <div class="w-100% h-100%" data-scroll-section>
+            <LookbooksVue  />
+            <BestsellersVue  />
+        </div>
+
         <AboutVue data-scroll-section />
         <Blog data-scroll-section />
     </div>
