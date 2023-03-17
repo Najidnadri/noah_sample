@@ -1,11 +1,11 @@
 <template>
     <div>
-        <heroVue />
-        <NewArrivalsVue />
-        <LookbooksVue />
-        <BestsellersVue />
-        <AboutVue />
-        <Blog />
+        <heroVue data-scroll-section />
+        <NewArrivalsVue data-scroll-section />
+        <LookbooksVue  data-scroll-section />
+        <BestsellersVue data-scroll-section />
+        <AboutVue data-scroll-section />
+        <Blog data-scroll-section />
     </div>
 
 </template>
@@ -26,6 +26,19 @@ export default {
         BestsellersVue,
         AboutVue,
         Blog
+    },
+    setup() {
+        // let {$LocomotiveScroll} = useNuxtApp();
+        // let scroll = null;
+
+        // onMounted(() => {
+        //     scroll = new $LocomotiveScroll({
+        //         el: document.querySelector('[data-scroll-container]'),
+        //         smooth: true
+        //     })
+        //     console.log(scroll)
+        // })
+        
     }
 }
 </script>

@@ -16,7 +16,6 @@ export default {
 
 <style scoped>
 .hero {
-    height: 100svh;
     height: 100vh;
 }
 </style>
