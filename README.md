@@ -1,42 +1,28 @@
-# Nuxt 3 Minimal Starter
+# NOAH E-commerce Redesign
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This repository contains a live web example of a redesign concept found on [Behance](https://www.behance.net/gallery/162912947/NOAH-E-commerce-redesign?tracking_source=search_projects%7CEcommerce+noah).
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- Hover transition
+- Simple enter animation
+- Locomotive scroll
+- Huge performance boost
+- Comprehensive SEO implementations
+- Firebase integrations
 
-```bash
-# yarn
-yarn install
+## Usage
 
-# npm
+To view the live demo, visit [https://example.com](https://example.com).
+
+To clone the repository and run the project locally, use the following commands:
+```
+git clone https://github.com/Najidnadri/noah_sample.git
+cd noah_sample
 npm install
-
-# pnpm
-pnpm install
+npm preview
 ```
 
-## Development Server
+## Copywrite
 
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+I do not own any copywrite inside this website sample.
