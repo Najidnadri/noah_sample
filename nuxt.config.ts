@@ -38,12 +38,12 @@ export default defineNuxtConfig({
                 { name:"MobileOptimized", content:"width" },
                 { name:"HandheldFriendly", content:"true" },
                 { name:"apple-mobile-web-app-capable", content:"yes"},
-                { name:"apple-mobile-web-app-status-bar-style", content:"rgba(255, 255, 255, 1)"},
+                { name:"apple-mobile-web-app-status-bar-style", content:"rgba(246, 246, 246, 1)"},
                 { content:"True", name:"HandheldFriendly"},
                 
                 { name:"viewport", content:"width=device-width, initial-scale=1.0, viewport-fit=cover"}, 
                 { name:"color-scheme", content:"light"},
-                { name:"theme-color", content:"rgba(255, 255, 255, 1)", id:"theme-color"},
+                { name:"theme-color", content:"rgba(246, 246, 246, 1)", id:"theme-color"},
             ],
             link: [
                 { rel:"icon", href: '/favicon.ico', sizes: "any"},
