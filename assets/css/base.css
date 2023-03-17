@@ -18,10 +18,6 @@ h1, h2, h3, h4, h5, h6, p, li {
     margin: 0;
 }
 
-h2 {
-    font-family: 'CrimsonPro';
-}
-
 button {
     border-radius: 4px;
     cursor: pointer !important;
@@ -135,6 +131,10 @@ a {
 
 .font-crimsonpro {
     font-family: 'CrimsonPro';
+}
+
+.font-courier {
+    font-family: 'Courier';
 }
 
 

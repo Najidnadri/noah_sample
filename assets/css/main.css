@@ -1,7 +1,7 @@
 :root {
   --primary-color: rgba(246, 246, 246, 1);
   --primary-light-color: #E6F0FF;
-  --secondary-color: #D7B26F;
+  --secondary-color: rgba(23, 23, 23, 1);
   --secondary-light-color: #FFF0D4;
   --secondary-light2-color: #FFD17C;
 
@@ -13,7 +13,7 @@
 :root {
   --primary-color: rgba(246, 246, 246, 1);
   --primary-light-color: #E6F0FF;
-  --secondary-color: #D7B26F;
+  --secondary-color: rgba(23, 23, 23, 1);
   --secondary-light-color: #FFF0D4;
   --secondary-light2-color: #FFD17C;
 
@@ -25,7 +25,7 @@
 :root {
   --primary-color: rgba(246, 246, 246, 1);
   --primary-light-color: #E6F0FF;
-  --secondary-color: #D7B26F;
+  --secondary-color: rgba(23, 23, 23, 1);
   --secondary-light-color: #FFF0D4;
   --secondary-light2-color: #FFD17C;
 
@@ -60,20 +60,34 @@
 } 
 
 @font-face {
-  font-family: "CrimsonPro";
-  src: url("../fonts/CrimsonPro-regular.ttf");
-  font-weight: 125 950;
+  font-family: "Courier";
+  src: url("../fonts/CourierPrime-Regular.ttf");
+  font-weight: 500;
   font-style: normal;
-  font-stretch: 75% 125%;
   font-display: swap;
 } 
 
 @font-face {
-  font-family: "Epilogue";
-  src: url("../fonts/CrimsonPro-italic.ttf");
-  font-weight: 125 950;
+  font-family: "Courier";
+  src: url("../fonts/CourierPrime-Italic.ttf");
+  font-weight: 500;
   font-style: italic;
-  font-stretch: 75% 125%;
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Courier";
+  src: url("../fonts/CourierPrime-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Courier";
+  src: url("../fonts/CourierPrime-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
   font-display: swap;
 } 
 

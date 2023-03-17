@@ -1,5 +1,5 @@
 <template>
-  <header class="header absolute left-0 right-0 top-0 h-70px z-99">
+  <header class="header sticky left-0 right-0 top-0 h-70px z-99">
     <div class="flex flex-row justify-between items-center primary h-100% w-100% max-w-1400px mx-auto px-20px relative gap-50px">
         <ul class="flex flex-row justify-start items-center gap-10px text-16px">
             <li>Shop</li>
