@@ -5,7 +5,7 @@
         <div class="newsletter flex flex-col justify-start items-start h-100%">
             <h2 class="text-18px font-600">NEWSLATTER</h2>
             <div class="grid grid-cols-[auto_30px] items-center newsletter-input mt-10px w-100% max-w-300px">
-                <input type="email" class="text-16px pr-10px py-5px" placeholder="email"/>
+                <input type="email" class="text-16px pr-10px py-5px primary-bg" placeholder="email"/>
                 <icon :name="'material-symbols:arrow-right-alt'" class="secondary opacity-90 text-20px cursor-pointer" title="submit"/>
             </div>
             <div class="grid grid-cols-[15px_auto] mt-10px gap-5px cursor-pointer">
