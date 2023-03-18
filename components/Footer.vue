@@ -1,6 +1,6 @@
 <template>
   <footer class="footer w-100% ">
-    <div class="top-part min-h-300px px-20px pt-60px">
+    <div class="top-part min-h-300px px-20px py-60px">
 
         <div class="newsletter flex flex-col justify-start items-start h-100%">
             <h2 class="text-18px font-600">NEWSLATTER</h2>
@@ -15,33 +15,35 @@
             
         </div>
 
-        <div class="nav">
-            <div class="socials col-span-2 text-16px secondary flex flex-col gap-6px">
-                <a class="decoration-underline" href="#">INSTAGRAM</a>
-                <a class="decoration-underline" href="#">TELEGRAM</a>
-                <a class="decoration-underline" href="#">YOUTUBE</a>
-            </div>
-            <div class="about col-span-1 ">
-                <h3 class="text-18px font-550">ABOUT</h3>
-                <nav class="mt-10px flex flex-col gap-6px secondary text-16px">
-                    <a>Blog</a>
-                    <a>Stores</a>
-                    <a>Archive</a>
-                    <a>Not Dead Yet</a>
-                </nav>
-            </div>
-            <div class="help col-span-1">
-                <h3 class="text-18px font-550">HELP</h3>
-                <nav class="mt-10px flex flex-col gap-6px secondary text-16px">
-                    <a>FAQ</a>
-                    <a>Contact</a>
-                    <a>Returns</a>
-                    <a>Careers</a>
-                </nav>
-            </div>
+        <div class="socials text-16px secondary gap-6px">
+            <a class="decoration-underline" href="#">INSTAGRAM</a>
+            <a class="decoration-underline" href="#">TELEGRAM</a>
+            <a class="decoration-underline" href="#">YOUTUBE</a>
+        </div>
+
+        <div class="about col-span-1 ">
+            <h3 class="text-18px font-550">ABOUT</h3>
+            <nav class="mt-10px flex flex-col gap-6px secondary text-16px">
+                <a>Blog</a>
+                <a>Stores</a>
+                <a>Archive</a>
+                <a>Not Dead Yet</a>
+            </nav>
+        </div>
+
+        <div class="help col-span-1">
+            <h3 class="text-18px font-550">HELP</h3>
+            <nav class="mt-10px flex flex-col gap-6px secondary text-16px">
+                <a>FAQ</a>
+                <a>Contact</a>
+                <a>Returns</a>
+                <a>Careers</a>
+            </nav>
         </div>
 
     </div>
+
+
     <div class="bottom-part flex flex-row justify-between items-center secondary h-50px w-100% px-20px text-15px">
         <a>Policies</a>
         <a>Privacy</a>
@@ -66,21 +68,28 @@ export default {
 
 .top-part {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
+
+
 
 .newsletter-input {
     border-bottom: 2px solid rgba(0, 0, 0, 0.5);
 }
 
-input:focus {
-    outline: none;
+
+.about {
+    grid-column: span 1;
 }
 
-.nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.help {
+    grid-column: span 1;
+}
+
+input:focus {
+    outline: none;
 }
 
 a {
@@ -90,5 +99,72 @@ a {
 
 a:hover {
     opacity: 1;
+}
+</style>
+
+<style scoped>
+.top-part {
+    gap: 30px;
+}
+.socials {
+    grid-row: 3;
+    grid-column: span 8;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.newsletter {
+    grid-column: span 8;
+}
+
+.about {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+}
+
+.help {
+    grid-column: 6 / span 3;
+    grid-row: 2;
+}
+
+@media only screen and (min-width: 685px) {
+.top-part {
+    gap: 0px;
+}
+
+.newsletter {
+    grid-column: span 4;
+}
+
+.about {
+    grid-column: 7 / span 1;
+    grid-row: auto;
+}
+
+.help {
+    grid-column: 8 / span 1;
+    grid-row: auto;
+}
+}
+
+@media only screen and (min-width: 810px) {
+.socials {
+    grid-row: auto;
+    grid-column: span 2;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin-bottom: 0;
+}
+
+
 }
 </style>
