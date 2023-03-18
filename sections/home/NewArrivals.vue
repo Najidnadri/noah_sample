@@ -5,7 +5,7 @@
         <nuxt-link :to="''" class="text-16px">See more +</nuxt-link>
     </div>
 
-    <div class="items w-100% gap-20px py-40px overflow-hidden">
+    <div class="items w-100% gap-20px py-40px overflow-visible">
         <div class="item cursor-pointer">
             <div class="product-image w-100% h-100%">
                 <img src="https://cdn.shopify.com/s/files/1/1007/8070/products/KN107SS23_MANDARIN_COLLAR_RUGBY_0261_1200x.jpg?v=1678156911" class="w-100% h-100% object-cover"/>
@@ -56,8 +56,8 @@ export default {
 <style scoped>
 .items {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     place-items: center;
+    align-items: center;
 }
 
 .item {
@@ -97,4 +97,60 @@ export default {
 .item:nth-child(4) {
     transform: rotateZ(5deg);
 }
+</style>
+
+<style scoped>
+
+.items {
+    grid-template-columns: 1fr 1fr;
+}
+
+.item {
+    width: 40vw;
+    height: auto;
+    aspect-ratio: 3 / 5;
+}
+
+.item:nth-child(3) {
+    display: none;
+}
+
+.item:nth-child(4) {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+.items {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.item:nth-child(3) {
+    display: grid;
+}
+
+.item {
+    width: 27vw;
+}
+}
+
+@media only screen and (min-width: 1015px) {
+
+.item {
+    width: 280px;
+    height: 500px; 
+}
+
+}
+
+
+
+@media only screen and (min-width: 1350px) {
+.items {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.item:nth-child(4) {
+    display: grid;
+}
+}
+
+
 </style>

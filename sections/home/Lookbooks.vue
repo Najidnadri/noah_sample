@@ -20,8 +20,8 @@
             </div>
             <div class="lookbook-description text-18px font-courier">
                 <p class="max-w-400px">The more things change, the more they stay the same</p>
-                <icon :name="'material-symbols:arrow-outward-sharp'" class="text-30px secondary translate-x-10px"/>
             </div>
+            <icon :name="'material-symbols:arrow-outward-sharp'" class="text-30px secondary translate-x-10px arrow-icon"/>
         </div>
 
         <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[2].hover ? 1 : 0.7}" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-2.5" data-scroll-target="#lookbooks-pin">
@@ -30,8 +30,8 @@
             </div>
             <div class="lookbook-description text-18px font-courier">
                 <p class="max-w-600px">Noah Spring / Summer 22 will launch on the dates below, with new products releasing every thursday through July</p>
-                <icon :name="'material-symbols:arrow-outward-sharp'" class="text-30px secondary translate-x-10px"/>
             </div>
+            <icon :name="'material-symbols:arrow-outward-sharp'" class="text-30px secondary translate-x-10px arrow-icon"/>
         </div>
 
         <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[1].hover ? 1 : 0.7}" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3" data-scroll-target="#lookbooks-pin">
@@ -40,8 +40,8 @@
             </div>
             <div class="lookbook-description text-18px font-courier">
                 <p class="max-w-400px">We're in a 70' mood right now</p>
-                <icon :name="'material-symbols:arrow-outward-sharp'" class="text-30px secondary translate-x-10px"/>
             </div>
+            <icon :name="'material-symbols:arrow-outward-sharp'" class="text-30px secondary translate-x-10px arrow-icon"/>
         </div>
 
         <div class="lookbook relative min-h-80px py-20px" :style="{opacity: lookbooks[0].hover ? 1 : 0.7}" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3.5" data-scroll-target="#lookbooks-pin">
@@ -50,8 +50,8 @@
             </div>
             <div class="lookbook-description text-18px font-courier">
                 <p class="max-w-400px">When nothing is off limits, everything is possible</p>
-                <icon :name="'material-symbols:arrow-outward-sharp'" class="text-30px secondary translate-x-10px"/>
             </div>
+            <icon :name="'material-symbols:arrow-outward-sharp'" class="text-30px secondary translate-x-10px arrow-icon"/>
         </div>
     </div>
 
@@ -166,11 +166,32 @@ export default {
     opacity: 0.7;
     
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 30px;
+}
+</style>
+
+<style scoped>
+
+.lookbook {
+    grid-template-columns: 1fr 30px;
+    grid-template-rows: auto auto;
 }
 
-.lookbook-description {
-    display: grid;
-    grid-template-columns: auto 30px;
+.arrow-icon {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+@media only screen and (min-width: 600px) {
+.lookbook {
+    grid-template-columns: 1fr 1fr 30px;
+    grid-template-rows: auto;
+}
+
+.arrow-icon {
+    grid-column: auto;
+    grid-row: auto;
+}
+
 }
 </style>
