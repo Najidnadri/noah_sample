@@ -14,15 +14,24 @@ This repository contains a live web example of a redesign concept found on [Beha
 
 ## Usage
 
-To view the live demo, visit [https://example.com](https://example.com).
+To view the live demo, visit [https://noah-sample-najid.web.app](https://noah-sample-najid.web.app).
 
 To clone the repository and run the project locally, use the following commands:
 ```
 git clone https://github.com/Najidnadri/noah_sample.git
 cd noah_sample
 npm install
+npm generate
 npm preview
 ```
+
+## BENCHMARK
+
+### GTMetrix
+![Gtmetrix benchmark](./pictures/GTmetrix.png)
+
+### Lighthouse
+![Lighthouse benchmark](./pictures/Lighthouse.png)
 
 ## Copywrite
 
