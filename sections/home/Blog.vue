@@ -10,7 +10,7 @@
         <div class="desktop blog-content w-100% px-20px mt-20px">
             <div class="blogs w-100%">
                 <div class="blog p-15px w-100%">
-                    <img class="w-100% object-cover" src="https://cdn.shopify.com/s/files/1/1007/8070/articles/NOAH-FW22-Shinnecock-Cover.jpg?v=1669043678&width=500" alt="Blog Image"/>
+                    <img class="w-100% object-cover h-250px" src="https://cdn.shopify.com/s/files/1/1007/8070/articles/NOAH-FW22-Shinnecock-Cover.jpg?v=1669043678&width=500" alt="Blog Image"/>
                     <h3 class="text-16px font-550 mt-15px">Shinnecock Kelp Farmers</h3>
                     <p class="text-16px mt-10px opacity-90">Kelp forests are a vital part of the marine ecosystem and food web...</p>
                 </div>

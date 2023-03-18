@@ -19,21 +19,21 @@ export default defineNuxtConfig({
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-                { name:'description', content: ''},
-                { name:"keywords", content:"" },
+                { name:'description', content: 'Noah Redesign Concept Live Preview'},
+                { name:"keywords", content:"Noah Redesign Concept Live Preview" },
                 { property:"image:alt_text", content:"Noah Sample | Home" },
                 {property:"og:site_name", content:"Noah Sample | Home" },
                 {property:"og:type", content:"website" },
-                {property:"og:url", content:"" },
+                {property:"og:url", content:"https://noah-sample-najid.web.app/" },
                 {property:"og:title", content:"Noah Sample | Home" },
-                {property:"og:description", content:"" },
+                {property:"og:description", content:"Noah Redesign Concept Live Preview" },
                 {property:"og:image", content:"" },
                 {property:"og:image:url", content:"" },
                 {property:"og:image:secure_url", content:"" },
                 {name:"twitter:card", content:"summary_large_image" },
-                {name:"twitter:description", content:"" },
+                {name:"twitter:description", content:"Noah Redesign Concept Live Preview" },
                 {name:"twitter:title", content:"Noah Sample | Home" },
-                { name:"twitter:url", content:"" },
+                { name:"twitter:url", content:"https://noah-sample-najid.web.app/" },
                 { name:"twitter:image", content:"" },
                 { name:"MobileOptimized", content:"width" },
                 { name:"HandheldFriendly", content:"true" },
@@ -61,6 +61,7 @@ export default defineNuxtConfig({
     modules: [
         'nuxt-icon',
         '@unocss/nuxt',
+        'nuxt-delay-hydration',
         // [
         //   '@nuxtjs/firebase',
         //   {
@@ -86,12 +87,18 @@ export default defineNuxtConfig({
         uno: true,
     },
 
+    delayHydration: {
+        mode: 'mount',
+        // enables nuxt-delay-hydration in dev mode for testing  
+        debug: process.env.NODE_ENV === 'development'
+    },  
 
     build: {
         transpile: [
             'vue3-tel-input'
         ]
-    }
+    },
+
 
 })
 

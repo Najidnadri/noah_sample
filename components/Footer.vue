@@ -9,35 +9,36 @@
                 <icon :name="'material-symbols:arrow-right-alt'" class="secondary opacity-90 text-20px cursor-pointer" title="submit"/>
             </div>
             <div class="grid grid-cols-[15px_auto] mt-10px gap-5px cursor-pointer">
-                <input type="checkbox" class="mt-5px cursor-pointer" v-model="checked"/>
-                <p class="mt-10px text-12px opacity-80" @click="checked = !checked">I agree terms & condition</p>
+                <input type="checkbox" class="mt-5px cursor-pointer" v-model="checked" id="terms-checkbox"/>
+                <label for="terms-checkbox" class="mt-10px text-12px opacity-80" @click="checked = !checked">I agree terms & condition</label>
+                <!-- <p class="mt-10px text-12px opacity-80" @click="checked = !checked">I agree terms & condition</p> -->
             </div>
             
         </div>
 
         <div class="socials text-16px secondary gap-6px">
-            <a class="decoration-underline" href="#">INSTAGRAM</a>
-            <a class="decoration-underline" href="#">TELEGRAM</a>
-            <a class="decoration-underline" href="#">YOUTUBE</a>
+            <nuxt-link class="decoration-underline" :to="'/'">INSTAGRAM</nuxt-link>
+            <nuxt-link class="decoration-underline" :to="'/'">TELEGRAM</nuxt-link>
+            <nuxt-link class="decoration-underline" :to="'/'">YOUTUBE</nuxt-link>
         </div>
 
         <div class="about col-span-1 ">
             <h3 class="text-18px font-550">ABOUT</h3>
             <nav class="mt-10px flex flex-col gap-6px secondary text-16px">
-                <a>Blog</a>
-                <a>Stores</a>
-                <a>Archive</a>
-                <a>Not Dead Yet</a>
+                <nuxt-link :to="'/'">Blog</nuxt-link>
+                <nuxt-link :to="'/'">Stores</nuxt-link>
+                <nuxt-link :to="'/'">Archive</nuxt-link>
+                <nuxt-link :to="'/'">Not Dead Yet</nuxt-link>
             </nav>
         </div>
 
         <div class="help col-span-1">
             <h3 class="text-18px font-550">HELP</h3>
             <nav class="mt-10px flex flex-col gap-6px secondary text-16px">
-                <a>FAQ</a>
-                <a>Contact</a>
-                <a>Returns</a>
-                <a>Careers</a>
+                <nuxt-link :to="'/'">FAQ</nuxt-link>
+                <nuxt-link :to="'/'">Contact</nuxt-link>
+                <nuxt-link :to="'/'">Returns</nuxt-link>
+                <nuxt-link :to="'/'">Careers</nuxt-link>
             </nav>
         </div>
 
@@ -45,8 +46,8 @@
 
 
     <div class="bottom-part flex flex-row justify-between items-center secondary h-50px w-100% px-20px text-15px">
-        <a>Policies</a>
-        <a>Privacy</a>
+        <nuxt-link :to="'/'">Policies</nuxt-link>
+        <nuxt-link :to="'/'">Privacy</nuxt-link>
     </div>
   </footer>
 </template>

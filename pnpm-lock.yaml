@@ -9,6 +9,7 @@ specifiers:
   firebase: ^9.18.0
   locomotive-scroll: ^4.1.4
   nuxt: 3.2.0
+  nuxt-delay-hydration: ^1.1.4
   nuxt-icon: ^0.2.11
   vue3-lottie: ^2.4.0
 
@@ -24,6 +25,7 @@ dependencies:
 devDependencies:
   '@unocss/nuxt': 0.49.8
   nuxt: 3.2.0
+  nuxt-delay-hydration: 1.1.4
   nuxt-icon: 0.2.11
 
 packages:
@@ -2126,6 +2128,16 @@ packages:
 
   /@types/estree/1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
+    dev: true
+
+  /@types/lodash.template/4.5.1:
+    resolution: {integrity: sha512-0y71S2dGgmwdkSsyW95JBp8HSZchgKCsjr6F0lsT3eSMtaT3Nn9rcMHU1U4UKu6XjQT3YC6/PNwgFI7k9f+ltw==}
+    dependencies:
+      '@types/lodash': 4.14.191
+    dev: true
+
+  /@types/lodash/4.14.191:
+    resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
     dev: true
 
   /@types/long/4.0.2:
@@ -4856,6 +4868,19 @@ packages:
       - supports-color
     dev: true
 
+  /nuxt-delay-hydration/1.1.4:
+    resolution: {integrity: sha512-CXa/DYiho0YP1Sw3gwedU9XY003KfiC9VeZ7yvLcmozmOpcQH8DsSgH9iSdNXbTbAMMyaPWCTYqWoNBU607YCw==}
+    dependencies:
+      '@nuxt/kit': 3.2.0
+      '@types/lodash.template': 4.5.1
+      lodash.template: 4.5.0
+      packrup: 0.1.0
+      radix3: 1.0.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
   /nuxt-icon/0.2.11:
     resolution: {integrity: sha512-mHFgTMrf+CzG7l6cdVQ7vF2XaXz8fs53QC6bk+zVZEHBCCwFtRoG0H+62y+y0iAo2+cD4VYmvsAiRMKIlIGxVA==}
     dependencies:
@@ -5022,6 +5047,10 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       p-limit: 3.1.0
+    dev: true
+
+  /packrup/0.1.0:
+    resolution: {integrity: sha512-HnUl9ztHGty5ZK13WM8Q7854SWPKH/eCT+MiTO0P1qCu1Y4S5PPJ8E9MwD3cnjSr7PUPzXDnmOVJIKM043OfJQ==}
     dev: true
 
   /parse-git-config/3.0.0:
