@@ -51,7 +51,7 @@ li, h1, svg {
 }
 
 .menu-icon {
-    display: none
+    display: none !important;
 }
 }
 </style>

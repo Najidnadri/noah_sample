@@ -111,9 +111,10 @@ export default {
         })
 
         let contentBoxMouseEnter = () => {
-            window.requestAnimationFrame(() => {
-                cursor.value.setVisible(1);
-            })
+
+            if (cursor.value.hoverIndex !== null) {
+                    cursor.value.setVisible(1);
+                }
         }
 
         let contentBoxMouseLeave = () => {
