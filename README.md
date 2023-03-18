@@ -1,6 +1,6 @@
 # NOAH E-commerce Redesign
 
-This repository contains a live web example of a redesign concept found on [Behance](https://www.behance.net/gallery/162912947/NOAH-E-commerce-redesign?tracking_source=search_projects%7CEcommerce+noah).
+This repository contains a live web example of a redesign concept found on [Behance](https://www.behance.net/gallery/162912947/NOAH-E-commerce-redesign?tracking_source=search_projects%7CEcommerce+noah). Live website is [here](https://noah-sample-najid.web.app/)
 
 ## Features
 
@@ -10,6 +10,7 @@ This repository contains a live web example of a redesign concept found on [Beha
 - Huge performance boost
 - Comprehensive SEO implementations
 - Firebase integrations
+- Mobile Responsive
 
 ## Usage
 
