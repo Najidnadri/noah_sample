@@ -3,7 +3,7 @@
 
         <div class="sub-header flex flex-row justify-between items-end px-20px pb-10px">
             <h2 class="text-25px font-600 font-oswald tracking-2px">BESTSELLERS</h2>
-            <nuxt-link :to="''" class="text-16px decoration-underline">See more +</nuxt-link>
+            <nuxt-link :to="'/'" class="text-16px decoration-underline">See more +</nuxt-link>
         </div>
 
         <!-- Desktop -->
@@ -16,7 +16,7 @@
                             <p class="text-16px opacity-90  font-courier">$188</p>
                         </div>
                         <div class="item-img w-100% h-100% mt-15px">
-                            <img src="https://cdn.shopify.com/s/files/1/1007/8070/products/S068SS23_SHORT_SLEEVE_FLANNEL_0450_1000x.jpg?v=1677886843" class="w-100% h-100% object-cover"/>
+                            <img src="https://cdn.shopify.com/s/files/1/1007/8070/products/S068SS23_SHORT_SLEEVE_FLANNEL_0450_1000x.jpg?v=1677886843" class="w-100% h-100% object-cover" alt="Bestsellers picture 1"/>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                             <p class="text-16px opacity-90  font-courier">$798</p>
                         </div>
                         <div class="item-img w-100% h-100% mt-15px">
-                            <img src="https://cdn.shopify.com/s/files/1/1007/8070/products/KN110SS23_RUGBY_POCKET_CARDIGAN_0636_1000x.jpg?v=1678308267" class="w-100% h-100% object-cover"/>
+                            <img src="https://cdn.shopify.com/s/files/1/1007/8070/products/KN110SS23_RUGBY_POCKET_CARDIGAN_0636_1000x.jpg?v=1678308267" class="w-100% h-100% object-cover" alt="Bestsellers picture 2"/>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                                 <p class="text-16px opacity-90  font-courier">$188</p>
                             </div>
                             <div class="item-img  mx-auto mt-20px">
-                                <img src="https://cdn.shopify.com/s/files/1/1007/8070/products/S068SS23_SHORT_SLEEVE_FLANNEL_0450_1000x.jpg?v=1677886843" class="w-100% h-100% object-cover"/>
+                                <img src="https://cdn.shopify.com/s/files/1/1007/8070/products/S068SS23_SHORT_SLEEVE_FLANNEL_0450_1000x.jpg?v=1677886843" class="w-100% h-100% object-cover" alt="Bestsellers picture 1"/>
                             </div>
                         </div>                    
                     </SplideSlide>
@@ -58,7 +58,7 @@
                                 <p class="text-16px opacity-90  font-courier">$798</p>
                             </div>
                             <div class="item-img mt-20px mx-auto">
-                                <img src="https://cdn.shopify.com/s/files/1/1007/8070/products/KN110SS23_RUGBY_POCKET_CARDIGAN_0636_1000x.jpg?v=1678308267" class="w-100% h-100% object-cover"/>
+                                <img src="https://cdn.shopify.com/s/files/1/1007/8070/products/KN110SS23_RUGBY_POCKET_CARDIGAN_0636_1000x.jpg?v=1678308267" class="w-100% h-100% object-cover" alt="Bestsellers picture 2"/>
                             </div>
                         </div>                    
                     </SplideSlide>

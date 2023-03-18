@@ -3,7 +3,7 @@
 
         <div class="sub-header flex flex-row justify-between items-end px-20px pb-10px">
             <h2 class="text-25px font-600 font-oswald tracking-2px">ABOUT US</h2>
-            <nuxt-link :to="''" class="text-16px decoration-underline">See more +</nuxt-link>
+            <nuxt-link :to="'/'" class="text-16px decoration-underline">See more +</nuxt-link>
         </div>
 
         <div class="about-content w-100% px-20px">
@@ -13,11 +13,11 @@
                     <p>We are inspired by what we love-the culture and people in music, skateboarding, creativity, surfing, social and environmental justice, and New York.</p>
                 </div>
                 <div class="w-100% max-w-300px h-150px">
-                    <img class="w-100% h-100% object-cover grayscale-100" src="https://cdn.shopify.com/s/files/1/1007/8070/articles/LOUIE-NOAH-49.jpg?v=1678541972&width=500"/>
+                    <img class="w-100% h-100% object-cover grayscale-100" src="https://cdn.shopify.com/s/files/1/1007/8070/articles/LOUIE-NOAH-49.jpg?v=1678541972&width=500" alt="about us picture"/>
                 </div>
             </div>
             <div class="right-part w-100% ">
-                <img class="w-100% h-100% object-cover grayscale-100" src="https://cdn.shopify.com/s/files/1/1007/8070/articles/Slice_1.jpg?v=1661356192&width=500"/>
+                <img class="w-100% h-100% object-cover grayscale-100" src="https://cdn.shopify.com/s/files/1/1007/8070/articles/Slice_1.jpg?v=1661356192&width=500" alt="about us picture 2"/>
             </div>
         </div>
 
